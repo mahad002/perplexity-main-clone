@@ -1,6 +1,6 @@
-openai
-exa-py
-dotenv
-Flask
-Flask-PyMongo
-pymongo[srv]
+openai==1.40.3
+exa-py==1.0.17
+dotenv==0.0.5
+Flask==2.3.2
+Flask-PyMongo==2.3.0
+pymongo[srv]==4.3.3
