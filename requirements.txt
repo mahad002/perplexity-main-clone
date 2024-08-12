@@ -1,0 +1,6 @@
+openai
+exa-py
+dotenv
+Flask
+Flask-PyMongo
+pymongo[srv]
