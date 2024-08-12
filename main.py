@@ -46,7 +46,7 @@ def ask():
     openai_api_key = data.get('OPENAI_API_KEY')
     exa_api_key = data.get('EXA_API_KEY')
     questions = data.get('questions')
-    username = session.get('username') or data.get('username')
+    # username = session.get('username') or data.get('username')
 
     if not all([openai_api_key, exa_api_key, questions]):
         return jsonify({'error': 'Missing parameters'}), 400
@@ -84,8 +84,8 @@ def ask():
         }
         responses.append(response)
 
-        if username:
-            mongo.db.chats.insert_one({'username': username, 'question': question, 'answer': response_content})
+        # if username:
+        #     mongo.db.chats.insert_one({'username': username, 'question': question, 'answer': response_content})
 
     return jsonify(responses)
 
